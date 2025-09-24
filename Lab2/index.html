@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fetch Lab</title>
+  </head>
+
+  <body>
+    <button id="fetchDataBtn">Отримати дані</button>
+  </body>
+  <script>
+    fetchDataBtn.addEventListener("click", () => {
+      //успішний запит
+      fetch("https://swapi.info/api/planets")
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+        .catch((err) => console.log(err));
+
+      //запит з помилкою 404
+      fetch("https://swapi.info/api/planet")
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+        .catch((err) => console.log(err));
+
+      //запит з помилкою 500
+      fetch("https://httpbin.org/status/500")
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+        .catch((err) => console.log(err));
+    });
+  </script>
+</html>
