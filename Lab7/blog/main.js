@@ -86,6 +86,40 @@ const filterArticles = (category, title) =>
       article.title.toLowerCase().startsWith(title.toLowerCase())
   );
 
+//рендеринг статті
+const renderArticle = (article) => `<li>
+            <article class="post-item">
+              <h3 class="post-title">${article.title}</h3>
+              <dl class="post-meta">
+                <dt>Автор:</dt>
+                <dd><strong>${article.author}</strong></dd>
+                <dt>Категорія:</dt>
+                <dd><em>${article.category}</em></dd>
+                <dt>Дата:</dt>
+                <dd>${new Date(article.date).toLocaleDateString("uk-UA")}</dd>
+              </dl>
+              <p class="post-content">${article.content}</p>
+              <ul class="post-tags">
+              ${article.tags
+                .map((tag) => `<li class="post-tag">#${tag}</li>`)
+                .join("")}
+              </ul>
+            </article>
+          </li>`;
+
+//рендеринг списку статей
+const renderArticles = (list = articles) => {
+  //рендеримо кількість знайдених статей
+  const counter = document.getElementById("posts-count");
+  counter.textContent = `Знайдено статей: ${list.length}`;
+
+  //рендеримо статті
+  const postsList = document.getElementById("post-list");
+  postsList.innerHTML =
+    list.map(renderArticle).join("") || "<p>Нічого не знайдено</p>";
+};
+
+// рендеринг категорій
 const renderCategories = () => {
   //відображаємо категорії
   const categories = getCategories();
@@ -114,27 +148,7 @@ const renderCategories = () => {
   });
 };
 
-//рендеринг статті
-const renderArticle = (article) => `<li>
-            <article class="post-item">
-              <h3 class="post-title">${article.title}</h3>
-              <dl class="post-meta">
-                <dt>Автор:</dt>
-                <dd><strong>${article.author}</strong></dd>
-                <dt>Категорія:</dt>
-                <dd><em>${article.category}</em></dd>
-                <dt>Дата:</dt>
-                <dd>${new Date(article.date).toLocaleDateString("uk-UA")}</dd>
-              </dl>
-              <p class="post-content">${article.content}</p>
-              <ul class="post-tags">
-              ${article.tags
-                .map((tag) => `<li class="post-tag">#${tag}</li>`)
-                .join("")}
-              </ul>
-            </article>
-          </li>`;
-
+//обробник подій для кнопки "Знайти"
 const searchButton = document.getElementById("search-button");
 searchButton.addEventListener("click", () => {
   const searchInput = document.getElementById("search-input");
@@ -142,16 +156,8 @@ searchButton.addEventListener("click", () => {
   renderArticles(filterArticles(...filterParams));
 });
 
-//рендеринг списку статей
-const renderArticles = (list = articles) => {
-  //рендеримо кількість знайдених статей
-  const counter = document.getElementById("posts-count");
-  counter.textContent = `Знайдено статей: ${list.length}`;
-
-  //рендеримо статті
-  const postsList = document.getElementById("post-list");
-  postsList.innerHTML =
-    list.map(renderArticle).join("") || "<p>Нічого не знайдено</p>";
-};
+//початковий рендер категорій
 renderCategories();
+
+//початковий рендер статей
 renderArticles(articles);
