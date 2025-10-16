@@ -79,12 +79,11 @@ const getCategories = () =>
   Array.from(new Set(articles.map((a) => a.category))).sort();
 
 //фільтрація статей
-const filterArticles = () =>
+const filterArticles = (category, title) =>
   articles.filter(
     (article) =>
-      (filterParams.category === null ||
-        article.category === filterParams.category) &&
-      article.title.toLowerCase().startsWith(filterParams.title.toLowerCase())
+      (filterParams.category === null || article.category === category) &&
+      article.title.toLowerCase().startsWith(title.toLowerCase())
   );
 
 const renderCategories = () => {
@@ -110,7 +109,7 @@ const renderCategories = () => {
       });
       //фільтруємо статті за обраною категорією
       filterParams.category = btn.dataset.filter || null;
-      renderArticles(filterArticles());
+      renderArticles(filterArticles(...filterParams));
     });
   });
 };
@@ -140,7 +139,7 @@ const searchButton = document.getElementById("search-button");
 searchButton.addEventListener("click", () => {
   const searchInput = document.getElementById("search-input");
   filterParams.title = searchInput.value;
-  renderArticles(filterArticles());
+  renderArticles(filterArticles(...filterParams));
 });
 
 //рендеринг списку статей
