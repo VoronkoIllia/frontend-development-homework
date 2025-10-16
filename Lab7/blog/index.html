@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Блог</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Мій Блог</h1>
+      <nav>
+        <a href="index.html">Головна</a>
+        <a href="auth.html">Увійти</a>
+        <a href="signup.html">Зареєструватися</a>
+      </nav>
+    </header>
+    <main>
+      <section id="filter-toolbar">
+        <div id="categories">
+          <button
+            class="category-button"
+            aria-pressed="true"
+            data-category="all"
+          >
+            Всі
+          </button>
+          <button class="category-button" data-category="tech">
+            Технології
+          </button>
+          <button class="category-button" data-category="life">Життя</button>
+          <button class="category-button" data-category="travel">
+            Подорожі
+          </button>
+        </div>
+        <div id="search-bar">
+          <input type="text" id="search-input" placeholder="Пошук..." />
+          <button id="search-button">Знайти</button>
+        </div>
+      </section>
+      <section id="posts">
+        <p id="posts-count">Знайдено статей: 0</p>
+        <ul id="post-list">
+          <li>
+            <article class="post-item">
+              <h3 class="post-title">Перший пост</h3>
+              <dl class="post-meta">
+                <dt>Автор:</dt>
+                <dd><strong>Ілля Воронко</strong></dd>
+                <dt>Категорія:</dt>
+                <dd><em>Технології</em></dd>
+                <dt>Дата:</dt>
+                <dd>2024-10-01</dd>
+              </dl>
+              <p class="post-content">Це мій перший пост у блозі!</p>
+              <ul class="post-tags">
+                <li><button class="post-tag">#перший</button></li>
+                <li><button class="post-tag">#блог</button></li>
+                <li><button class="post-tag">#технології</button></li>
+              </ul>
+            </article>
+          </li>
+          <li>
+            <article class="post-item">
+              <h3 class="post-title">Перший пост</h3>
+              <dl class="post-meta">
+                <dt>Автор:</dt>
+                <dd><strong>Ілля Воронко</strong></dd>
+                <dt>Категорія:</dt>
+                <dd><em>Технології</em></dd>
+                <dt>Дата:</dt>
+                <dd>2024-10-01</dd>
+              </dl>
+              <p class="post-content">Це мій перший пост у блозі!</p>
+              <ul class="post-tags">
+                <li>#перший</li>
+                <li>#блог</li>
+                <li>#технології</li>
+              </ul>
+            </article>
+          </li>
+          <li>
+            <article class="post-item">
+              <h3 class="post-title">Перший пост</h3>
+              <dl class="post-meta">
+                <dt>Автор:</dt>
+                <dd><strong>Ілля Воронко</strong></dd>
+                <dt>Категорія:</dt>
+                <dd><em>Технології</em></dd>
+                <dt>Дата:</dt>
+                <dd>2024-10-01</dd>
+              </dl>
+              <p class="post-content">Це мій перший пост у блозі!</p>
+              <ul class="post-tags">
+                <li>#перший</li>
+                <li>#блог</li>
+                <li>#технології</li>
+              </ul>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
