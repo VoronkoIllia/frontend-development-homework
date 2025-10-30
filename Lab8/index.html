@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main-page-style.css" />
+    <title>Лабораторна робота 6</title>
+  </head>
+  <body>
+    <header>
+      <h1>Воронко Ілля, група ІН-33</h1>
+      <div class="links-to-other-pages">
+        <a href="signup.html">Sign Up</a><a href="auth.html">Auth</a
+        ><a href="blog/index.html">Blog</a>
+      </div>
+    </header>
+    <nav>
+      <a href="#about">Про мене</a>
+      <a href="#hobbies">Мої хобі</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+    <aside>
+      Змушує замислитись...
+      <blockquote>
+        "Куди дірка дівається, як бублик їдять?" - Остап Вишня
+      </blockquote>
+    </aside>
+    <main>
+      <article id="about">
+        <h1>Про мене</h1>
+        <div>
+          <img
+            src="./assets/images/voronkoila.png"
+            alt="Ілля Воронко"
+            title="Ілля Воронко"
+            fetchpriority="high"
+          />
+          <p>
+            Мене звати Ілля, студент 3 курсу спеціальності "Інформатика"
+            Сумського державного університету. Я обрав цю спецальність, оскільки
+            мені дуже подобається придумувати рішення певних задач та
+            реалізовувати їх у програмному вигляді. Наразі я маю знання в HTML,
+            CSS, JavaScript та React. Також маю базові знання у мовах C#, Java
+            та Python.
+          </p>
+        </div>
+      </article>
+      <section id="hobbies">
+        <h1>Мої хоббі</h1>
+        <ul class="cards-list">
+          <li class="card">
+            <img
+              src="./assets/images/development-reactjs-800.jpg"
+              srcset="
+                ./assets/images/development-reactjs-400.jpg   400w,
+                ./assets/images/development-reactjs-800.jpg   800w,
+                ./assets/images/development-reactjs-1200.jpg 1200w
+              "
+              sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1200px"
+              alt="React Development"
+              title="React Development"
+              loading="lazy"
+            />
+            <h3>Розробка сайтів на React</h3>
+            <p>
+              Мені подобається створювати сучасні веб-додатки. Я вивчаю нові
+              технології, такі як React, Redux та Next.js, щоб робити свої
+              проєкти більш ефективними та зручними для користувачів. Особливу
+              увагу приділяю оптимізації продуктивності та інтеграції з API.
+              Розробка на React дозволяє мені реалізовувати складні інтерфейси
+              та отримувати задоволення від вирішення цікавих задач.
+            </p>
+          </li>
+          <li class="card">
+            <img
+              src="./assets/images/reading-books-800.jpg"
+              srcset="
+                ./assets/images/reading-books-400.jpg   400w,
+                ./assets/images/reading-books-800.jpg   800w,
+                ./assets/images/reading-books-1200.jpg 1200w
+              "
+              sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1200px"
+              alt="Reading Books"
+              title="Reading Books"
+              loading="lazy"
+            />
+            <h3>Читання книг</h3>
+            <p>
+              Мені подобається читати наукову фантастику та фентезі. Особливо
+              захоплююсь творами Айзека Азімова, Рея Бредбері та Джоан Роулінг.
+              Читання допомагає мені розширювати кругозір, розвивати уяву та
+              відпочивати від повсякденних турбот.
+            </p>
+          </li>
+          <li class="card">
+            <img
+              src="./assets/images/gym-800.jpg"
+              srcset="
+                ./assets/images/gym-400.jpg   400w,
+                ./assets/images/gym-800.jpg   800w,
+                ./assets/images/gym-1200.jpg 1200w
+              "
+              sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1200px"
+              alt="Gym"
+              title="Gym"
+              loading="lazy"
+            />
+            <h3>Фізичні тренування</h3>
+            <p>
+              Регулярні тренування допомагають мені підтримувати форму,
+              розвивати силу та витривалість. Я тренуюся кілька разів на
+              тиждень, займаюся як з вагами, так і кардіо-навантаженнями. Це не
+              лише покращує моє фізичне здоров'я, а й допомагає зняти стрес та
+              підвищити настрій.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <address>
+        <p>Email: voronkoila27@gmail.com</p>
+        <p>Телефон: +380631234567</p>
+      </address>
+      <p>&copy; 2025 Воронко Ілля - Усі права порушені</p>
+    </footer>
+  </body>
+</html>
