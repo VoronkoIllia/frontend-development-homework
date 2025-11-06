@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "title": "Дюна: Частина друга",
+      "originalTitle": "Dune: Part Two",
+      "year": 2024,
+      "genre": ["Фантастика", "Пригоди"],
+      "rating": 8.7,
+      "poster": "https://image.tmdb.org/t/p/w500/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg",
+      "duration": "166 хв",
+      "description": "Пол Атрідес об’єднується з народом фременів, щоб помститися за знищення своєї родини та привести Дюну до нового майбутнього.",
+      "trailerUrl": "https://www.youtube.com/watch?v=Way9Dexny3w"
+    },
+    {
+      "id": 2,
+      "title": "Оппенгеймер",
+      "originalTitle": "Oppenheimer",
+      "year": 2023,
+      "genre": ["Біографія", "Драма", "Історія"],
+      "rating": 8.6,
+      "poster": "https://image.tmdb.org/t/p/original/iAv3HAlrrIgjcf2yCFvedJzekXT.jpg",
+      "duration": "180 хв",
+      "description": "Історія американського фізика Роберта Оппенгеймера, який очолив створення першої атомної бомби під час Другої світової війни.",
+      "trailerUrl": "https://www.youtube.com/watch?v=uYPbbksJxIg"
+    },
+    {
+      "id": 3,
+      "title": "Думками навиворіт 2",
+      "originalTitle": "Inside Out 2",
+      "year": 2024,
+      "genre": ["Анімація", "Комедія", "Сімейний"],
+      "rating": 8.1,
+      "poster": "https://image.tmdb.org/t/p/original/9vzfqonVaK6CtiUZ91TTb19yWFN.jpg",
+      "duration": "100 хв",
+      "description": "Райлі стає підлітком, і в її голові з’являються нові емоції, з якими Радість, Печаль та інші мають навчитися співіснувати.",
+      "trailerUrl": "https://www.youtube.com/watch?v=LEjhY15eCx0"
+    },
+    {
+      "id": 4,
+      "title": "Бетмен",
+      "originalTitle": "The Batman",
+      "year": 2022,
+      "genre": ["Бойовик", "Кримінал", "Детектив"],
+      "rating": 7.9,
+      "poster": "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+      "duration": "176 хв",
+      "description": "Коли вбивця залишає після себе серію загадкових послань, Бетмен розкриває масштабну корупцію в Готемі, що пов’язана з його родиною.",
+      "trailerUrl": "https://www.youtube.com/watch?v=mqqft2x_Aa4"
+    },
+    {
+      "id": 5,
+      "title": "Людина-павук: Додому шляху нема",
+      "originalTitle": "Spider-Man: No Way Home",
+      "year": 2021,
+      "genre": ["Бойовик", "Пригоди", "Фантастика"],
+      "rating": 8.3,
+      "poster": "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+      "duration": "148 хв",
+      "description": "Після того як світ дізнався, хто такий Спайдермен, Пітер Паркер звертається до Доктора Стренджа за допомогою, але заклинання відкриває мультивсесвіт.",
+      "trailerUrl": "https://www.youtube.com/watch?v=JfVOs4VSpmA"
+    }
+]
