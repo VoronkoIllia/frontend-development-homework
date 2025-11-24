@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Блог</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Мій Блог</h1>
+      <nav>
+        <a href="#">Головна</a>
+        <a href="#">Увійти</a>
+        <a href="#">Зареєструватися</a>
+      </nav>
+    </header>
+    <main>
+      <section id="filter-toolbar">
+        <div id="categories">
+          <button id="addPostBtn">Створити пост</button>
+          <button id="clearPostBtn">Очистити пости</button>
+        </div>
+        <div id="search-bar">
+          <input type="text" id="search-input" placeholder="Пошук..." />
+          <button id="search-button">Знайти</button>
+        </div>
+      </section>
+      <section id="posts">
+        <p id="posts-count">Знайдено статей: 0</p>
+        <ul id="post-list"></ul>
+      </section>
+      <div class="modal-window-container">
+        <div class="modal-window">
+          <button id="closeFormBtn"></button>
+          <form id="addPostForm">
+            <h2>Додати новий пост</h2>
+            <div class="form-field">
+              <label for="postTitle">Заголовок:</label>
+              <input type="text" id="postTitle" name="postTitle" required />
+            </div>
+            <div class="form-field">
+              <label for="postContent">Зміст:</label>
+              <textarea id="postContent" name="postContent" required></textarea>
+            </div>
+            <button type="submit">Додати пост</button>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
