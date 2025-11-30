@@ -63,34 +63,33 @@ const updateCounter = (postCount: number) => {
 
 // Оновлення списку постів
 const updatePosts = async () => {
-  showNotFound();
-  // setLoading(true);
-  // try {
-  //   const posts = await fetchPosts();
-  //   setLoading(false);
+  setLoading(true);
+  try {
+    const posts = await fetchPosts();
+    setLoading(false);
 
-  //   updateCounter(posts.length);
+    updateCounter(posts.length);
 
-  //   // Якщо пости не знайдені, показати відповідне повідомлення
-  //   if (posts.length === 0) {
-  //     showNotFound();
-  //     return;
-  //   }
+    // Якщо пости не знайдені, показати відповідне повідомлення
+    if (posts.length === 0) {
+      showNotFound();
+      return;
+    }
 
-  //   // Відображення постів
-  //   const postList = document.getElementById("post-list")!;
-  //   postList.innerHTML = "";
-  //   for (const article of posts) {
-  //     const postItem = document.createElement("li");
-  //     postItem.append(renderPost(article));
-  //     postList.appendChild(postItem);
-  //   }
-  // } catch (error) {
-  //   // Обробка помилки при завантаженні постів
-  //   setLoading(false);
-  //   updateCounter(0);
-  //   showError((error as Error).message);
-  // }
+    // Відображення постів
+    const postList = document.getElementById("post-list")!;
+    postList.innerHTML = "";
+    for (const article of posts) {
+      const postItem = document.createElement("li");
+      postItem.append(renderPost(article));
+      postList.appendChild(postItem);
+    }
+  } catch (error) {
+    // Обробка помилки при завантаженні постів
+    setLoading(false);
+    updateCounter(0);
+    showError((error as Error).message);
+  }
 };
 
 // Ініціалізація подій після завантаження DOM
